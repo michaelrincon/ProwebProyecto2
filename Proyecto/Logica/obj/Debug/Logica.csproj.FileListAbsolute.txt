@@ -3,3 +3,12 @@ C:\Users\steve\OneDrive\Documentos\Ultimo semestre\Proweb\Parte.NET\Clonado.NET\
 C:\Users\steve\OneDrive\Documentos\Ultimo semestre\Proweb\Parte.NET\Clonado.NET\Proyecto\Logica\obj\Debug\Logica.csproj.CoreCompileInputs.cache
 C:\Users\steve\OneDrive\Documentos\Ultimo semestre\Proweb\Parte.NET\Clonado.NET\Proyecto\Logica\obj\Debug\Logica.dll
 C:\Users\steve\OneDrive\Documentos\Ultimo semestre\Proweb\Parte.NET\Clonado.NET\Proyecto\Logica\obj\Debug\Logica.pdb
+C:\Users\steve\OneDrive\Documentos\Ultimo semestre\Proweb\Parte.NET\Clonado.NET\Proyecto\Logica\bin\Debug\Modelo.dll
+C:\Users\steve\OneDrive\Documentos\Ultimo semestre\Proweb\Parte.NET\Clonado.NET\Proyecto\Logica\bin\Debug\Repositorio.dll
+C:\Users\steve\OneDrive\Documentos\Ultimo semestre\Proweb\Parte.NET\Clonado.NET\Proyecto\Logica\bin\Debug\EntityFramework.dll
+C:\Users\steve\OneDrive\Documentos\Ultimo semestre\Proweb\Parte.NET\Clonado.NET\Proyecto\Logica\bin\Debug\Modelo.pdb
+C:\Users\steve\OneDrive\Documentos\Ultimo semestre\Proweb\Parte.NET\Clonado.NET\Proyecto\Logica\bin\Debug\Repositorio.pdb
+C:\Users\steve\OneDrive\Documentos\Ultimo semestre\Proweb\Parte.NET\Clonado.NET\Proyecto\Logica\bin\Debug\Repositorio.dll.config
+C:\Users\steve\OneDrive\Documentos\Ultimo semestre\Proweb\Parte.NET\Clonado.NET\Proyecto\Logica\bin\Debug\EntityFramework.xml
+C:\Users\steve\OneDrive\Documentos\Ultimo semestre\Proweb\Parte.NET\Clonado.NET\Proyecto\Logica\obj\Debug\Logica.csprojAssemblyReference.cache
+C:\Users\steve\OneDrive\Documentos\Ultimo semestre\Proweb\Parte.NET\Clonado.NET\Proyecto\Logica\obj\Debug\Logica.csproj.CopyComplete

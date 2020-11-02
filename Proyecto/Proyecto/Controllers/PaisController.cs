@@ -6,6 +6,7 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using Logica;
 using Proyecto.Data;
 using Proyecto.Models;
 
@@ -18,7 +19,8 @@ namespace Proyecto.Controllers
         // GET: Pais
         public ActionResult Index()
         {
-            return View(db.Pais.ToList());
+            var listapaises = new PaisLogica().GetPaises();
+            return View(listapaises);
         }
 
         // GET: Pais/Details/5

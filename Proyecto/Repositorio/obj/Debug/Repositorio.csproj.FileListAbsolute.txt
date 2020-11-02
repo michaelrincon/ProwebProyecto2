@@ -3,3 +3,12 @@ C:\Users\steve\OneDrive\Documentos\Ultimo semestre\Proweb\Parte.NET\Clonado.NET\
 C:\Users\steve\OneDrive\Documentos\Ultimo semestre\Proweb\Parte.NET\Clonado.NET\Proyecto\Repositorio\obj\Debug\Repositorio.csproj.CoreCompileInputs.cache
 C:\Users\steve\OneDrive\Documentos\Ultimo semestre\Proweb\Parte.NET\Clonado.NET\Proyecto\Repositorio\obj\Debug\Repositorio.dll
 C:\Users\steve\OneDrive\Documentos\Ultimo semestre\Proweb\Parte.NET\Clonado.NET\Proyecto\Repositorio\obj\Debug\Repositorio.pdb
+C:\Users\steve\OneDrive\Documentos\Ultimo semestre\Proweb\Parte.NET\Clonado.NET\Proyecto\Repositorio\bin\Debug\Repositorio.dll.config
+C:\Users\steve\OneDrive\Documentos\Ultimo semestre\Proweb\Parte.NET\Clonado.NET\Proyecto\Repositorio\bin\Debug\EntityFramework.dll
+C:\Users\steve\OneDrive\Documentos\Ultimo semestre\Proweb\Parte.NET\Clonado.NET\Proyecto\Repositorio\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\steve\OneDrive\Documentos\Ultimo semestre\Proweb\Parte.NET\Clonado.NET\Proyecto\Repositorio\bin\Debug\Modelo.dll
+C:\Users\steve\OneDrive\Documentos\Ultimo semestre\Proweb\Parte.NET\Clonado.NET\Proyecto\Repositorio\bin\Debug\Modelo.pdb
+C:\Users\steve\OneDrive\Documentos\Ultimo semestre\Proweb\Parte.NET\Clonado.NET\Proyecto\Repositorio\bin\Debug\EntityFramework.xml
+C:\Users\steve\OneDrive\Documentos\Ultimo semestre\Proweb\Parte.NET\Clonado.NET\Proyecto\Repositorio\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\steve\OneDrive\Documentos\Ultimo semestre\Proweb\Parte.NET\Clonado.NET\Proyecto\Repositorio\obj\Debug\Repositorio.csprojAssemblyReference.cache
+C:\Users\steve\OneDrive\Documentos\Ultimo semestre\Proweb\Parte.NET\Clonado.NET\Proyecto\Repositorio\obj\Debug\Repositorio.csproj.CopyComplete

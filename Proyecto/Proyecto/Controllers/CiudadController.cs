@@ -6,6 +6,7 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using Logica;
 using Proyecto.Data;
 using Proyecto.Models;
 
@@ -18,7 +19,8 @@ namespace Proyecto.Controllers
         // GET: Ciudad
         public ActionResult Index()
         {
-            return View(db.Ciudads.ToList());
+            var listaciudades = new CiudadLogica().GetCiudades();
+            return View(listaciudades);
         }
 
         // GET: Ciudad/Details/5

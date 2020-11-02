@@ -6,6 +6,7 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using Logica;
 using Proyecto.Data;
 using Proyecto.Models;
 
@@ -18,7 +19,8 @@ namespace Proyecto.Controllers
         // GET: Departamento
         public ActionResult Index()
         {
-            return View(db.Departamentoes.ToList());
+            var listadepartamentos = new DepartamentoLogica().GetDepartamentos();
+            return View(listadepartamentos);
         }
 
         // GET: Departamento/Details/5

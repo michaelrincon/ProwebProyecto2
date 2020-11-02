@@ -88,3 +88,10 @@ C:\Users\steve\OneDrive\Documentos\Ultimo semestre\Proweb\Parte.NET\Clonado.NET\
 C:\Users\steve\OneDrive\Documentos\Ultimo semestre\Proweb\Parte.NET\Clonado.NET\Proyecto\Proyecto\obj\Debug\Proyecto.csproj.CopyComplete
 C:\Users\steve\OneDrive\Documentos\Ultimo semestre\Proweb\Parte.NET\Clonado.NET\Proyecto\Proyecto\obj\Debug\Proyecto.dll
 C:\Users\steve\OneDrive\Documentos\Ultimo semestre\Proweb\Parte.NET\Clonado.NET\Proyecto\Proyecto\obj\Debug\Proyecto.pdb
+C:\Users\steve\OneDrive\Documentos\Ultimo semestre\Proweb\Parte.NET\Clonado.NET\Proyecto\Proyecto\bin\Logica.dll
+C:\Users\steve\OneDrive\Documentos\Ultimo semestre\Proweb\Parte.NET\Clonado.NET\Proyecto\Proyecto\bin\Modelo.dll
+C:\Users\steve\OneDrive\Documentos\Ultimo semestre\Proweb\Parte.NET\Clonado.NET\Proyecto\Proyecto\bin\Repositorio.dll
+C:\Users\steve\OneDrive\Documentos\Ultimo semestre\Proweb\Parte.NET\Clonado.NET\Proyecto\Proyecto\bin\Logica.pdb
+C:\Users\steve\OneDrive\Documentos\Ultimo semestre\Proweb\Parte.NET\Clonado.NET\Proyecto\Proyecto\bin\Modelo.pdb
+C:\Users\steve\OneDrive\Documentos\Ultimo semestre\Proweb\Parte.NET\Clonado.NET\Proyecto\Proyecto\bin\Repositorio.pdb
+C:\Users\steve\OneDrive\Documentos\Ultimo semestre\Proweb\Parte.NET\Clonado.NET\Proyecto\Proyecto\bin\Repositorio.dll.config
