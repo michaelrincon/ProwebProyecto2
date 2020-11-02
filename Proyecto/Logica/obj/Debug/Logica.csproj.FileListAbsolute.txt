@@ -1,0 +1,5 @@
+C:\Users\steve\OneDrive\Documentos\Ultimo semestre\Proweb\Parte.NET\Clonado.NET\Proyecto\Logica\bin\Debug\Logica.dll
+C:\Users\steve\OneDrive\Documentos\Ultimo semestre\Proweb\Parte.NET\Clonado.NET\Proyecto\Logica\bin\Debug\Logica.pdb
+C:\Users\steve\OneDrive\Documentos\Ultimo semestre\Proweb\Parte.NET\Clonado.NET\Proyecto\Logica\obj\Debug\Logica.csproj.CoreCompileInputs.cache
+C:\Users\steve\OneDrive\Documentos\Ultimo semestre\Proweb\Parte.NET\Clonado.NET\Proyecto\Logica\obj\Debug\Logica.dll
+C:\Users\steve\OneDrive\Documentos\Ultimo semestre\Proweb\Parte.NET\Clonado.NET\Proyecto\Logica\obj\Debug\Logica.pdb

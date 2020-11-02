@@ -1,0 +1,6 @@
+C:\Users\steve\OneDrive\Documentos\Ultimo semestre\Proweb\Parte.NET\Clonado.NET\Proyecto\Modelo\bin\Debug\Modelo.dll
+C:\Users\steve\OneDrive\Documentos\Ultimo semestre\Proweb\Parte.NET\Clonado.NET\Proyecto\Modelo\bin\Debug\Modelo.pdb
+C:\Users\steve\OneDrive\Documentos\Ultimo semestre\Proweb\Parte.NET\Clonado.NET\Proyecto\Modelo\obj\Debug\Modelo.csproj.CoreCompileInputs.cache
+C:\Users\steve\OneDrive\Documentos\Ultimo semestre\Proweb\Parte.NET\Clonado.NET\Proyecto\Modelo\obj\Debug\Modelo.dll
+C:\Users\steve\OneDrive\Documentos\Ultimo semestre\Proweb\Parte.NET\Clonado.NET\Proyecto\Modelo\obj\Debug\Modelo.pdb
+C:\Users\steve\OneDrive\Documentos\Ultimo semestre\Proweb\Parte.NET\Clonado.NET\Proyecto\Modelo\obj\Debug\Modelo.csprojAssemblyReference.cache
