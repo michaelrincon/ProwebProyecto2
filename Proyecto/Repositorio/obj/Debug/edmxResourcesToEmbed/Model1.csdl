@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="bdprowebModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Ciudade">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NombreCiudad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DepartamentoId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Departamento" Relationship="Self.FK_Ciudades_Departamentos" FromRole="Ciudades" ToRole="Departamentos" />
+  </EntityType>
+  <EntityType Name="Departamento">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NombreDepartamento" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PaisId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Ciudades" Relationship="Self.FK_Ciudades_Departamentos" FromRole="Departamentos" ToRole="Ciudades" />
+    <NavigationProperty Name="Pais" Relationship="Self.FK_Departamentos_Paises" FromRole="Departamentos" ToRole="Paises" />
+  </EntityType>
+  <EntityType Name="Pais">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NombrePais" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Departamentos" Relationship="Self.FK_Departamentos_Paises" FromRole="Paises" ToRole="Departamentos" />
+  </EntityType>
+  <Association Name="FK_Ciudades_Departamentos">
+    <End Role="Departamentos" Type="Self.Departamento" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Ciudades" Type="Self.Ciudade" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Departamentos">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Ciudades">
+        <PropertyRef Name="DepartamentoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Departamentos_Paises">
+    <End Role="Paises" Type="Self.Pais" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Departamentos" Type="Self.Departamento" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Paises">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Departamentos">
+        <PropertyRef Name="PaisId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="bdprowebEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Ciudades" EntityType="Self.Ciudade" />
+    <EntitySet Name="Departamentos" EntityType="Self.Departamento" />
+    <EntitySet Name="Paises" EntityType="Self.Pais" />
+    <AssociationSet Name="FK_Ciudades_Departamentos" Association="Self.FK_Ciudades_Departamentos">
+      <End Role="Departamentos" EntitySet="Departamentos" />
+      <End Role="Ciudades" EntitySet="Ciudades" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Departamentos_Paises" Association="Self.FK_Departamentos_Paises">
+      <End Role="Paises" EntitySet="Paises" />
+      <End Role="Departamentos" EntitySet="Departamentos" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

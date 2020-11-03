@@ -19,24 +19,12 @@ namespace Proyecto.Controllers
         // GET: Ciudad
         public ActionResult Index()
         {
-            var listaciudades = new CiudadLogica().GetCiudades();
-            return View(listaciudades);
+            Int32 idciu = (int)TempData["idciu"];
+            var listadepartamentos = new CiudadLogica().GetCiudadesDepartamento(idciu);
+            TempData["idciu"] = idciu;
+            return View(listadepartamentos);
         }
 
-        // GET: Ciudad/Details/5
-        public ActionResult Details(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Ciudad ciudad = db.Ciudads.Find(id);
-            if (ciudad == null)
-            {
-                return HttpNotFound();
-            }
-            return View(ciudad);
-        }
 
         // GET: Ciudad/Create
         public ActionResult Create()
@@ -53,8 +41,8 @@ namespace Proyecto.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Ciudads.Add(ciudad);
-                db.SaveChanges();
+                Int32 idciu = (int)TempData["idciu"];
+                new CiudadLogica().Create(ciudad,idciu);
                 return RedirectToAction("Index");
             }
 
@@ -68,7 +56,7 @@ namespace Proyecto.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Ciudad ciudad = db.Ciudads.Find(id);
+            Ciudad ciudad = new CiudadLogica().GetCiudadById(id ?? 0);
             if (ciudad == null)
             {
                 return HttpNotFound();
@@ -85,8 +73,7 @@ namespace Proyecto.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Entry(ciudad).State = EntityState.Modified;
-                db.SaveChanges();
+                new CiudadLogica().Update(ciudad);
                 return RedirectToAction("Index");
             }
             return View(ciudad);
@@ -99,7 +86,7 @@ namespace Proyecto.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Ciudad ciudad = db.Ciudads.Find(id);
+            Ciudad ciudad = new CiudadLogica().GetCiudadById(id ?? 0);
             if (ciudad == null)
             {
                 return HttpNotFound();
@@ -112,9 +99,7 @@ namespace Proyecto.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Ciudad ciudad = db.Ciudads.Find(id);
-            db.Ciudads.Remove(ciudad);
-            db.SaveChanges();
+            new CiudadLogica().Delete(id);
             return RedirectToAction("Index");
         }
 

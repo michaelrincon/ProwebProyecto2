@@ -23,5 +23,73 @@ namespace Logica
             }
 
         }
+
+        public List<Proyecto.Models.Departamento> GetDepartamentosPais(int id)
+        {
+            try
+            {
+                var listadepartamentos = new PaisRepositorio().GetDepartamentosPais(id);
+                return listadepartamentos;
+            }
+            catch (Exception)
+            {
+                return new List<Proyecto.Models.Departamento>();
+                //throw;
+            }
+
+        }
+
+        public Proyecto.Models.Departamento GetDepartamentoById(int id)
+        {
+            try
+            {
+                var result = new DepartamentoRepositorio().GetDepartamentoById(id);
+                return result;
+            }
+            catch (Exception)
+            {
+                return new Proyecto.Models.Departamento();
+                //throw;
+            }
+        }
+
+        public void Create(Proyecto.Models.Departamento departamento, int idpais)
+        {
+            try
+            {
+                new DepartamentoRepositorio().Create(departamento,idpais);
+            }
+            catch (Exception)
+            {
+
+                //throw;
+            }
+        }
+
+        public void Update(Proyecto.Models.Departamento departamento)
+        {
+            try
+            {
+                new DepartamentoRepositorio().Update(departamento);
+            }
+            catch (Exception)
+            {
+
+                //throw;
+            }
+        }
+
+        public void Delete(int id)
+        {
+            try
+            {
+                new DepartamentoRepositorio().Delete(id);
+            }
+            catch (Exception)
+            {
+
+                //throw;
+            }
+        }
     }
 }

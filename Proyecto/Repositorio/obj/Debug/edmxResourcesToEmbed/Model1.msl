@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="bdprowebModelStoreContainer" CdmEntityContainer="bdprowebEntities1">
+    <EntitySetMapping Name="Ciudades">
+      <EntityTypeMapping TypeName="bdprowebModel.Ciudade">
+        <MappingFragment StoreEntitySet="Ciudades">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="NombreCiudad" ColumnName="NombreCiudad" />
+          <ScalarProperty Name="DepartamentoId" ColumnName="DepartamentoId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Departamentos">
+      <EntityTypeMapping TypeName="bdprowebModel.Departamento">
+        <MappingFragment StoreEntitySet="Departamentos">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="NombreDepartamento" ColumnName="NombreDepartamento" />
+          <ScalarProperty Name="PaisId" ColumnName="PaisId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Paises">
+      <EntityTypeMapping TypeName="bdprowebModel.Pais">
+        <MappingFragment StoreEntitySet="Paises">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="NombrePais" ColumnName="NombrePais" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

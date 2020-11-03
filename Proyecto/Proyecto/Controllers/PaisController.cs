@@ -30,12 +30,8 @@ namespace Proyecto.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Pais pais = db.Pais.Find(id);
-            if (pais == null)
-            {
-                return HttpNotFound();
-            }
-            return View(pais);
+            TempData["iddep"] = id;
+            return RedirectToAction("Index","Departamento");
         }
 
         // GET: Pais/Create
@@ -53,8 +49,7 @@ namespace Proyecto.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Pais.Add(pais);
-                db.SaveChanges();
+                new PaisLogica().Create(pais);
                 return RedirectToAction("Index");
             }
 
@@ -68,7 +63,7 @@ namespace Proyecto.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Pais pais = db.Pais.Find(id);
+            Pais pais = new PaisLogica().GetPaisById(id ?? 0);
             if (pais == null)
             {
                 return HttpNotFound();
@@ -85,8 +80,7 @@ namespace Proyecto.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Entry(pais).State = EntityState.Modified;
-                db.SaveChanges();
+                new PaisLogica().Update(pais);
                 return RedirectToAction("Index");
             }
             return View(pais);
@@ -99,7 +93,7 @@ namespace Proyecto.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Pais pais = db.Pais.Find(id);
+            Pais pais = new PaisLogica().GetPaisById(id ?? 0);
             if (pais == null)
             {
                 return HttpNotFound();
@@ -112,9 +106,7 @@ namespace Proyecto.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Pais pais = db.Pais.Find(id);
-            db.Pais.Remove(pais);
-            db.SaveChanges();
+            new PaisLogica().Delete(id);
             return RedirectToAction("Index");
         }
 

@@ -14,5 +14,7 @@ namespace Proyecto.Models
 
         [DisplayName("Nombre ciudad")]
         public string NombreCiudad { get; set; }
+
+        public int DepartamentoId { get; set; }
     }
 }

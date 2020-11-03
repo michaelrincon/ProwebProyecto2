@@ -16,6 +16,18 @@ namespace Proyecto
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
+                defaults: new { controller = "Pais", action = "Index", id = UrlParameter.Optional }
+            );
+
+            routes.MapRoute(
+                name: "Departa",
+                url: "{controller}/{action}/{id}",
+                defaults: new { controller = "Departamento", action = "Index", id = UrlParameter.Optional }
+            );
+
+            routes.MapRoute(
+                name: "Ciudad",
+                url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Ciudad", action = "Index", id = UrlParameter.Optional }
             );
         }

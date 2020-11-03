@@ -19,7 +19,9 @@ namespace Proyecto.Controllers
         // GET: Departamento
         public ActionResult Index()
         {
-            var listadepartamentos = new DepartamentoLogica().GetDepartamentos();
+            Int32 iddep = (int)TempData["iddep"];
+            var listadepartamentos = new DepartamentoLogica().GetDepartamentosPais(iddep);
+            TempData["iddep"] = iddep;
             return View(listadepartamentos);
         }
 
@@ -30,12 +32,8 @@ namespace Proyecto.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Departamento departamento = db.Departamentoes.Find(id);
-            if (departamento == null)
-            {
-                return HttpNotFound();
-            }
-            return View(departamento);
+            TempData["idciu"] = id;
+            return RedirectToAction("Index", "Ciudad");
         }
 
         // GET: Departamento/Create
@@ -53,8 +51,8 @@ namespace Proyecto.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Departamentoes.Add(departamento);
-                db.SaveChanges();
+                Int32 iddep = (int)TempData["iddep"];
+                new DepartamentoLogica().Create(departamento, iddep);
                 return RedirectToAction("Index");
             }
 
@@ -68,7 +66,7 @@ namespace Proyecto.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Departamento departamento = db.Departamentoes.Find(id);
+            Departamento departamento = new DepartamentoLogica().GetDepartamentoById(id ?? 0);
             if (departamento == null)
             {
                 return HttpNotFound();
@@ -85,8 +83,7 @@ namespace Proyecto.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Entry(departamento).State = EntityState.Modified;
-                db.SaveChanges();
+                new DepartamentoLogica().Update(departamento);
                 return RedirectToAction("Index");
             }
             return View(departamento);
@@ -99,7 +96,7 @@ namespace Proyecto.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Departamento departamento = db.Departamentoes.Find(id);
+            Departamento departamento = new DepartamentoLogica().GetDepartamentoById(id ?? 0);
             if (departamento == null)
             {
                 return HttpNotFound();
@@ -112,9 +109,7 @@ namespace Proyecto.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Departamento departamento = db.Departamentoes.Find(id);
-            db.Departamentoes.Remove(departamento);
-            db.SaveChanges();
+            new DepartamentoLogica().Delete(id);
             return RedirectToAction("Index");
         }
 
