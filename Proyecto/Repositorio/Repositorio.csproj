@@ -53,6 +53,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AspNetUser.cs">
+      <DependentUpon>ModelAuth.tt</DependentUpon>
+    </Compile>
     <Compile Include="Ciudade.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -76,6 +79,21 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Model1.edmx</DependentUpon>
     </Compile>
+    <Compile Include="ModelAuth.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelAuth.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelAuth.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelAuth.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelAuth.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelAuth.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Pais.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -90,6 +108,13 @@
     </EntityDeploy>
     <None Include="Model1.edmx.diagram">
       <DependentUpon>Model1.edmx</DependentUpon>
+    </None>
+    <EntityDeploy Include="ModelAuth.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModelAuth.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="ModelAuth.edmx.diagram">
+      <DependentUpon>ModelAuth.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
   </ItemGroup>
@@ -112,6 +137,16 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
+    <Content Include="ModelAuth.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelAuth.edmx</DependentUpon>
+      <LastGenOutput>ModelAuth.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="ModelAuth.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelAuth.edmx</DependentUpon>
+      <LastGenOutput>ModelAuth.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
